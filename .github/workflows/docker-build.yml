@@ -31,8 +31,8 @@ jobs:
 
       - name: Construir imagen Docker
         run: |
-          docker build -t ghcr.io/mezitajr-ship-it/mi-app:latest .
+          docker build -t ghcr.io/mezitajr-ship-it/mi-app:${{ github.sha }} .
 
       - name: Publicar imagen en GHCR
         run: |
-          docker push ghcr.io/mezitajr-ship-it/mi-app:latest     
+          docker push ghcr.io/mezitajr-ship-it/mi-app:${{ github.sha }}     
