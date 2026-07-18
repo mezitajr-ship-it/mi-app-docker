@@ -36,9 +36,8 @@ jobs:
         run: |
           docker build \
           -t ghcr.io/mezitajr-ship-it/mi-app:${{ env.IMAGE_TAG }} \
-          -t ghcr.io/mezitajr-ship-it/mi-app:latest \     
+          -t ghcr.io/mezitajr-ship-it/mi-app:latest \
           .
-
       - name: Publicar imagen en GHCR
         run: |
           docker push ghcr.io/mezitajr-ship-it/mi-app:${{ env.IMAGE_TAG }}     
